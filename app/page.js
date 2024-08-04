@@ -28,7 +28,10 @@ export default function Home() {
                     <p className="text-2xl font-semibold">Thomas Mahut</p>
                     <p className="opacity-50">@mahutt</p>
                 </div>
-                <p>I'm an engineering undergraduate at Concordia University.</p>
+                <p>
+                    I&apos;m an engineering undergraduate at Concordia
+                    University.
+                </p>
             </div>
             <nav className="sticky top-0 bg-black">
                 <ul className="flex space-x-4 py-3">
