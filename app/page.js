@@ -33,7 +33,7 @@ export default function Home() {
                     University.
                 </p>
             </div>
-            <nav className="sticky top-0 bg-black">
+            <nav>
                 <ul className="flex space-x-4 py-3">
                     <li
                         onClick={() => handleNavItemClick("projects")}
