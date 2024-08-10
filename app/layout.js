@@ -1,40 +1,22 @@
-"use client";
-
-import { useState } from "react";
 import { Inter } from "next/font/google";
-import Experience from "./components/Experience";
-import Navigation from "./components/Navigation";
-import Projects from "./components/Projects";
+import Header from "./components/Header";
 
 import "./globals.css";
 
 const inter = Inter({ subsets: ["latin"] });
 
-export default function RootLayout() {
-    const [currentRoute, setCurrentRoute] = useState("/projects");
+export const metadata = {
+    title: "mahutt",
+    description: "Thomas Mahut's Online Portfolio",
+};
 
-    const renderContent = () => {
-        switch (currentRoute) {
-            case "/projects":
-                return <Projects />;
-            case "/experience":
-                return <Experience />;
-            case "/socials":
-                return <p>social</p>;
-            default:
-                return <Projects />;
-        }
-    };
-
+export default function RootLayout({ children }) {
     return (
         <html lang="en">
             <body className={inter.className}>
                 <main className="max-w-xl px-4 mt-8 mx-auto mb-3">
-                    <Navigation
-                        currentRoute={currentRoute}
-                        setCurrentRoute={setCurrentRoute}
-                    />
-                    {renderContent()}
+                    <Header />
+                    {children}
                 </main>
             </body>
         </html>
