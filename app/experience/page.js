@@ -34,7 +34,7 @@ export default function Experience() {
             {jobs.map((job) => (
                 <div
                     key={job.id}
-                    className="border border-gray-800 rounded-lg p-4"
+                    className="border border-gray-800 rounded-lg p-4 hover:shadow-glow transition-shadow duration-200 linear"
                 >
                     <div className="flex justify-between items-center flex-wrap gap-x-4">
                         <h3 className="text-lg font-medium">{job.company}</h3>

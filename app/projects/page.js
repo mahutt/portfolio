@@ -59,11 +59,11 @@ export default function Projects() {
     ];
 
     return (
-        <div className="space-y-6">
+        <div className="space-y-6 my-2">
             {projects.map((project) => (
                 <div
                     key={project.id}
-                    className="border border-gray-800 rounded-lg p-4"
+                    className="border border-gray-800 rounded-lg p-4 hover:shadow-glow transition-shadow duration-200 linear"
                 >
                     <h3 className="text-lg font-medium">{project.title}</h3>
                     <p className="text-sm text-gray-600 mt-2">
