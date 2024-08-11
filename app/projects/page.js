@@ -1,6 +1,7 @@
 "use client";
 
 import React from "react";
+import { ArrowUpRightIcon } from "@heroicons/react/24/solid";
 
 export default function Projects() {
     const projects = [
@@ -62,7 +63,7 @@ export default function Projects() {
             {projects.map((project) => (
                 <div
                     key={project.id}
-                    className="border border-gray-500 rounded-lg p-4"
+                    className="border border-gray-800 rounded-lg p-4"
                 >
                     <h3 className="text-lg font-medium">{project.title}</h3>
                     <p className="text-sm text-gray-600 mt-2">
@@ -90,6 +91,7 @@ export default function Projects() {
                                 className="inline-block text-sm text-blue-600 hover:underline"
                             >
                                 {key}
+                                <ArrowUpRightIcon className="h-3 w-3 inline-block ml-1" />
                             </a>
                         ))}
                     </div>
