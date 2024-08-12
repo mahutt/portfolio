@@ -87,8 +87,9 @@ export default function Projects() {
                                 key={key}
                                 href={link}
                                 target="_blank"
-                                children={key}
-                            ></AnimatedAnchor>
+                            >
+                                {key}
+                            </AnimatedAnchor>
                         ))}
                     </div>
                 </div>
