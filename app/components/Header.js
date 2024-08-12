@@ -18,13 +18,24 @@ export default function Header() {
             <div className="flex flex-col mb-5">
                 <div className="mb-3">
                     <p className="text-2xl font-semibold">Thomas Mahut</p>
-                    <div className="mt-2 flex flex-row gap-2 opacity-50">
+                    <div className="mt-2 flex flex-row gap-2 text-gray-500">
                         <p>@mahutt</p>
-                        <a href="https://github.com/mahutt">
-                            <FontAwesomeIcon icon={faGithub} size="lg" />
+                        <a href="https://github.com/mahutt" target="_blank">
+                            <FontAwesomeIcon
+                                icon={faGithub}
+                                size="lg"
+                                className="hover:text-gray-100 transition-colors duration-200"
+                            />
                         </a>
-                        <a href="https://www.linkedin.com/in/mahutt/">
-                            <FontAwesomeIcon icon={faLinkedin} size="lg" />
+                        <a
+                            href="https://www.linkedin.com/in/mahutt/"
+                            target="_blank"
+                        >
+                            <FontAwesomeIcon
+                                icon={faLinkedin}
+                                size="lg"
+                                className="hover:text-gray-100 transition-colors duration-200"
+                            />
                         </a>
                     </div>
                 </div>
