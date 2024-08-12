@@ -1,7 +1,7 @@
 "use client";
 
 import React from "react";
-import { ArrowUpRightIcon } from "@heroicons/react/24/solid";
+import AnimatedAnchor from "./AnimatedAnchor";
 
 export default function Projects() {
     const projects = [
@@ -83,16 +83,12 @@ export default function Projects() {
                     </div>
                     <div className="flex flex-wrap gap-4 mt-3">
                         {Object.entries(project.links).map(([key, link]) => (
-                            <a
+                            <AnimatedAnchor
                                 key={key}
                                 href={link}
                                 target="_blank"
-                                rel="noopener noreferrer"
-                                className="inline-block text-sm text-blue-600 hover:underline"
-                            >
-                                {key}
-                                <ArrowUpRightIcon className="h-3 w-3 inline-block ml-1" />
-                            </a>
+                                children={key}
+                            ></AnimatedAnchor>
                         ))}
                     </div>
                 </div>
