@@ -15,8 +15,8 @@ export default function Experience() {
         },
         {
             id: 2,
-            company: "Tennis Montreal & Monkland Tennis Club",
-            time: "2018 - 2022",
+            company: "Tennis Montreal",
+            time: "2019 - 2022",
             position: "Tennis Instructor",
             summary:
                 "Organized leagues, designed and provided tennis lessons to all age groups. Developed a variety of methods to motivate and provide feedback to different personalities",
@@ -25,6 +25,20 @@ export default function Experience() {
                 "Motivation",
                 "Patience",
                 "Conflict Resolution",
+            ],
+        },
+        {
+            id: 3,
+            company: "Monkland Tennis Club",
+            time: "2018 - 2021",
+            position: "Tennis Instructor",
+            summary:
+                "Taught tennis techniques & strategy in clinic and camp environments. Taught the importance of fitness, nutrition, mindset, and overall health.",
+            technologies: [
+                "Observation",
+                "Adaptability",
+                "Organizational Skills",
+                "Leadership",
             ],
         },
     ];
@@ -44,7 +58,7 @@ export default function Experience() {
                         {job.position}
                     </h3>
                     <p className="text-sm text-gray-600 mt-2">{job.summary}</p>
-                    <div className="mt-3">
+                    <div className="mt-4 mb-1">
                         <div className="flex flex-wrap gap-2 mt-1">
                             {job.technologies.map((tech, index) => (
                                 <span
