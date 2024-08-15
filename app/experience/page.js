@@ -9,15 +9,18 @@ export default function Experience() {
         {
             id: 1,
             company: "Fundica",
-            time: "Fall 2023 & Summer 2024",
+            time: {
+                english: "Fall 2023 & Summer 2024",
+                french: "Automne 2023 et été 2024",
+            },
             position: {
                 english: "Full Stack Developer",
                 french: "Développeur Full Stack",
             },
             summary: {
                 english:
-                    "Developed and delivered new features, led PHP & Bootstrap migrations, and developed internal tools (UI test automation & web crawling) using Python & Java.",
-                french: "Développement et livraison de nouvelles fonctionnalités, migration de PHP et Bootstrap, et développement d'outils internes (automatisation des tests de UI et exploration du web) écrits en Python et en Java.",
+                    "Developed and delivered new features, led PHP & Bootstrap version migrations, and developed internal tools (UI test automation & web crawling) using Python & Java.",
+                french: "Développement et livraison de nouvelles fonctionnalités, migrations de version PHP et Bootstrap, et développement d'outils internes (automatisation des tests de UI et crawler web) écrits en Python et en Java.",
             },
             technologies: [
                 { english: "PHP", french: "PHP" },
@@ -29,7 +32,10 @@ export default function Experience() {
         {
             id: 2,
             company: "Tennis Montreal",
-            time: "2019 - 2022",
+            time: {
+                english: "2019 - 2022",
+                french: "2019 - 2022",
+            },
             position: {
                 english: "Tennis Instructor",
                 french: "Instructeur de tennis",
@@ -52,7 +58,10 @@ export default function Experience() {
         {
             id: 3,
             company: "Monkland Tennis Club",
-            time: "2018 - 2021",
+            time: {
+                english: "2018 - 2021",
+                french: "2018 - 2021",
+            },
             position: {
                 english: "Tennis Instructor",
                 french: "Instructeur de tennis",
@@ -83,7 +92,9 @@ export default function Experience() {
                 >
                     <div className="flex justify-between items-center flex-wrap gap-x-4">
                         <h3 className="text-lg font-medium">{job.company}</h3>
-                        <h3 className="text-sm text-gray-300">{job.time}</h3>
+                        <h3 className="text-sm text-gray-300">
+                            {job.time[inFrench ? "french" : "english"]}
+                        </h3>
                     </div>
                     <h3 className="text-base text-gray-300 font-normal">
                         {inFrench ? job.position.french : job.position.english}

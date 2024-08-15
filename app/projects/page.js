@@ -35,7 +35,7 @@ export default function Projects() {
             description: {
                 english:
                     "A web application that scrapes and renders a target web page so that it is mobile friendly and accessibility-oriented.",
-                french: "Une application web qui extrait et rend une page web cible de manière à ce qu'elle soit adaptée aux mobiles et axée sur l'accessibilité.",
+                french: "Une application web qui extrait et rend une page web cible de manière à ce qu'elle soit adaptée à la version mobile et axée sur l'accessibilité.",
             },
             technologies: ["Golang", "Echo", "Digital Ocean"],
             links: [
