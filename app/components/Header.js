@@ -9,7 +9,7 @@ import Dropdown from "./Dropdown";
 import { LanguageContext } from "../context/LanguageContext";
 
 export default function Header() {
-    const { inFrench, setInFrench } = useContext(LanguageContext);
+    const { language, setLanguage } = useContext(LanguageContext);
     const pathname = usePathname();
 
     const bio = {
@@ -38,8 +38,8 @@ export default function Header() {
                     <div className="flex justify-between items-center">
                         <p className="text-2xl font-semibold">Thomas Mahut</p>
                         <Dropdown
-                            inFrench={inFrench}
-                            setInFrench={setInFrench}
+                            language={language}
+                            setLanguage={setLanguage}
                         />
                     </div>
                     <div className="mt-2 flex flex-row gap-2 text-gray-500">
@@ -63,7 +63,7 @@ export default function Header() {
                         </a>
                     </div>
                 </div>
-                <p>{inFrench ? bio.french : bio.english}</p>
+                <p>{bio[language]}</p>
             </div>
             <nav>
                 <ul className="flex space-x-4 py-3">
@@ -77,7 +77,7 @@ export default function Header() {
                                         : "text-neutral-400"
                                 } cursor-pointer transition-colors duration-200`}
                             >
-                                {item.label[inFrench ? "french" : "english"]}
+                                {item.label[language]}
                             </Link>
                         </li>
                     ))}

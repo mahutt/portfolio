@@ -6,7 +6,7 @@ import { useContext } from "react";
 import { LanguageContext } from "../context/LanguageContext";
 
 export default function Projects() {
-    const { inFrench } = useContext(LanguageContext);
+    const { language } = useContext(LanguageContext);
     const projects = [
         {
             id: 1,
@@ -97,9 +97,7 @@ export default function Projects() {
                 >
                     <h3 className="text-lg font-medium">{project.title}</h3>
                     <p className="text-sm text-gray-600 mt-2">
-                        {inFrench
-                            ? project.description.french
-                            : project.description.english}
+                        {project.description[language]}
                     </p>
                     <div className="mt-3">
                         <div className="flex flex-wrap gap-2 mt-1">
@@ -120,7 +118,7 @@ export default function Projects() {
                                 href={link.href}
                                 target="_blank"
                             >
-                                {link.label[inFrench ? "french" : "english"]}
+                                {link.label[language]}
                             </AnimatedAnchor>
                         ))}
                     </div>

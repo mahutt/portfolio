@@ -4,7 +4,7 @@ import { LanguageContext } from "../context/LanguageContext";
 import { useContext } from "react";
 
 export default function Experience() {
-    const { inFrench } = useContext(LanguageContext);
+    const { language } = useContext(LanguageContext);
     const jobs = [
         {
             id: 1,
@@ -93,14 +93,14 @@ export default function Experience() {
                     <div className="flex justify-between items-center flex-wrap gap-x-4">
                         <h3 className="text-lg font-medium">{job.company}</h3>
                         <h3 className="text-sm text-gray-300">
-                            {job.time[inFrench ? "french" : "english"]}
+                            {job.time[language]}
                         </h3>
                     </div>
                     <h3 className="text-base text-gray-300 font-normal">
-                        {inFrench ? job.position.french : job.position.english}
+                        {job.position[language]}
                     </h3>
                     <p className="text-sm text-gray-600 mt-2">
-                        {inFrench ? job.summary.french : job.summary.english}
+                        {job.summary[language]}
                     </p>
                     <div className="mt-4 mb-1">
                         <div className="flex flex-wrap gap-2 mt-1">
@@ -109,7 +109,7 @@ export default function Experience() {
                                     key={index}
                                     className="bg-zinc-200 text-black text-xs rounded-lg px-3 py-1"
                                 >
-                                    {inFrench ? tech.french : tech.english}
+                                    {tech[language]}
                                 </span>
                             ))}
                         </div>

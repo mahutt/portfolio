@@ -4,10 +4,10 @@ import { createContext, useState } from "react";
 export const LanguageContext = createContext();
 
 export function LanguageProvider({ children }) {
-    const [inFrench, setInFrench] = useState(false);
+    const [language, setLanguage] = useState("english");
 
     return (
-        <LanguageContext.Provider value={{ inFrench, setInFrench }}>
+        <LanguageContext.Provider value={{ language, setLanguage }}>
             {children}
         </LanguageContext.Provider>
     );

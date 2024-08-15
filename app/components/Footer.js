@@ -4,7 +4,7 @@ import { useContext } from "react";
 import { LanguageContext } from "../context/LanguageContext";
 
 export default function Header() {
-    const { inFrench } = useContext(LanguageContext);
+    const { language } = useContext(LanguageContext);
 
     const message = {
         english: ["Made with", "in Montreal"],
@@ -13,9 +13,9 @@ export default function Header() {
 
     return (
         <footer className="my-5 opacity-75 text-center">
-            {message[inFrench ? "french" : "english"][0]}
+            {message[language][0]}
             <HeartIcon className="h-5 w-5 mx-1 inline-block text-red-500" />
-            {message[inFrench ? "french" : "english"][1]}
+            {message[language][1]}
         </footer>
     );
 }

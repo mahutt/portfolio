@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useRef } from "react";
 import { ChevronDownIcon } from "@heroicons/react/24/solid";
 
-const Dropdown = ({ inFrench, setInFrench }) => {
+const Dropdown = ({ language, setLanguage }) => {
     const [isOpen, setIsOpen] = useState(false);
     const dropdownRef = useRef(null);
 
@@ -23,9 +23,9 @@ const Dropdown = ({ inFrench, setInFrench }) => {
 
     const handleLanguageChange = (language) => {
         if (language === "Français") {
-            setInFrench(true);
+            setLanguage("french");
         } else {
-            setInFrench(false);
+            setLanguage("english");
         }
         setIsOpen(false);
     };
@@ -40,7 +40,7 @@ const Dropdown = ({ inFrench, setInFrench }) => {
                     } flex flex-row items-center inline-flex justify-center w-full rounded-2xl shadow-sm px-4 py-2 text-sm text-slate-200 focus:outline-none hover:bg-gray-900`}
                     onClick={() => setIsOpen(!isOpen)}
                 >
-                    {inFrench ? "Français" : "English"}
+                    {language === "french" ? "Français" : "English"}
                     <ChevronDownIcon className="-mr-1 ml-2 h-4 w-4" />
                 </button>
             </div>
@@ -56,8 +56,10 @@ const Dropdown = ({ inFrench, setInFrench }) => {
                             <a
                                 key={index}
                                 className={`block px-4 py-3 text-sm text-slate-200 hover:bg-gray-900 cursor-pointer ${
-                                    (inFrench && item === "Français") ||
-                                    (!inFrench && item === "English")
+                                    (language === "french" &&
+                                        item === "Français") ||
+                                    (language === "english" &&
+                                        item === "English")
                                         ? "underline underline-offset-2"
                                         : ""
                                 }`}
