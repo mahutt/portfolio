@@ -37,13 +37,11 @@ const Dropdown = ({ inFrench, setInFrench }) => {
                     type="button"
                     className={`${
                         isOpen ? "bg-gray-900" : ""
-                    } inline-flex justify-center w-full rounded-2xl shadow-sm px-4 py-2 text-sm text-slate-200 focus:outline-none hover:bg-gray-900`}
+                    } flex flex-row items-center inline-flex justify-center w-full rounded-2xl shadow-sm px-4 py-2 text-sm text-slate-200 focus:outline-none hover:bg-gray-900`}
                     onClick={() => setIsOpen(!isOpen)}
                 >
                     {inFrench ? "Français" : "English"}
-                    <span className="flex items-center">
-                        <ChevronDownIcon className="-mr-1 ml-2 h-4 w-4" />
-                    </span>
+                    <ChevronDownIcon className="-mr-1 ml-2 h-4 w-4" />
                 </button>
             </div>
 
