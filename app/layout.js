@@ -1,6 +1,7 @@
 import { Inter } from "next/font/google";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
+import { LanguageProvider } from "./context/LanguageContext";
 
 import "./globals.css";
 
@@ -18,11 +19,13 @@ export default function RootLayout({ children }) {
     return (
         <html lang="en">
             <body className={`${inter.className} flex flex-col min-h-screen`}>
-                <main className="flex-grow max-w-xl px-4 pt-8 mx-auto pb-3">
-                    <Header />
-                    {children}
-                </main>
-                <Footer />
+                <LanguageProvider>
+                    <main className="flex-grow max-w-xl px-4 pt-8 mx-auto pb-3">
+                        <Header />
+                        {children}
+                    </main>
+                    <Footer />
+                </LanguageProvider>
             </body>
         </html>
     );

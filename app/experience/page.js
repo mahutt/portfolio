@@ -1,44 +1,75 @@
 "use client";
 
-import React from "react";
+import { LanguageContext } from "../context/LanguageContext";
+import { useContext } from "react";
 
 export default function Experience() {
+    const { inFrench } = useContext(LanguageContext);
     const jobs = [
         {
             id: 1,
             company: "Fundica",
             time: "Fall 2023 & Summer 2024",
-            position: "Full Stack Developer",
-            summary:
-                "Developed and delivered new features, led PHP & Bootstrap migrations, and developed internal tools (UI test automation & web crawling) using Python & Java.",
-            technologies: ["PHP", "SQL", "Python", "Java"],
+            position: {
+                english: "Full Stack Developer",
+                french: "Développeur Full Stack",
+            },
+            summary: {
+                english:
+                    "Developed and delivered new features, led PHP & Bootstrap migrations, and developed internal tools (UI test automation & web crawling) using Python & Java.",
+                french: "Développement et livraison de nouvelles fonctionnalités, migration de PHP et Bootstrap, et développement d'outils internes (automatisation des tests de UI et exploration du web) écrits en Python et en Java.",
+            },
+            technologies: [
+                { english: "PHP", french: "PHP" },
+                { english: "SQL", french: "SQL" },
+                { english: "Python", french: "Python" },
+                { english: "Java", french: "Java" },
+            ],
         },
         {
             id: 2,
             company: "Tennis Montreal",
             time: "2019 - 2022",
-            position: "Tennis Instructor",
-            summary:
-                "Organized leagues, designed and provided tennis lessons to all age groups. Developed a variety of methods to motivate and provide feedback to different personalities",
+            position: {
+                english: "Tennis Instructor",
+                french: "Instructeur de tennis",
+            },
+            summary: {
+                english:
+                    "Organized leagues, designed and provided tennis lessons to all age groups. Developed a variety of methods to motivate and provide feedback to different personalities.",
+                french: "Animation de ligues, conception et organisation de cours de tennis pour tous les groupes d'âge. Développement d'une variété de méthodes pour motiver et fournir des retours à différentes personnalités.",
+            },
             technologies: [
-                "Communication",
-                "Motivation",
-                "Patience",
-                "Conflict Resolution",
+                { english: "Communication", french: "Communication" },
+                { english: "Motivation", french: "Motivation" },
+                { english: "Patience", french: "Patience" },
+                {
+                    english: "Conflict Resolution",
+                    french: "Résolution de conflits",
+                },
             ],
         },
         {
             id: 3,
             company: "Monkland Tennis Club",
             time: "2018 - 2021",
-            position: "Tennis Instructor",
-            summary:
-                "Taught tennis techniques & strategy in clinic and camp environments. Taught the importance of fitness, nutrition, mindset, and overall health.",
+            position: {
+                english: "Tennis Instructor",
+                french: "Instructeur de tennis",
+            },
+            summary: {
+                english:
+                    "Taught tennis techniques & strategy in clinic and camp environments. Taught the importance of fitness, nutrition, mindset, and overall health.",
+                french: "Enseigner les techniques et la stratégie du tennis dans des cliniques et des camps. Enseigner l'importance de la forme physique, de la nutrition, de l'état d'esprit et de la santé en général.",
+            },
             technologies: [
-                "Observation",
-                "Adaptability",
-                "Organizational Skills",
-                "Leadership",
+                { english: "Observation", french: "Observation" },
+                { english: "Adaptability", french: "Adaptabilité" },
+                {
+                    english: "Organizational Skills",
+                    french: "Compétences organisationnelles",
+                },
+                { english: "Leadership", french: "Leadership" },
             ],
         },
     ];
@@ -55,9 +86,11 @@ export default function Experience() {
                         <h3 className="text-sm text-gray-300">{job.time}</h3>
                     </div>
                     <h3 className="text-base text-gray-300 font-normal">
-                        {job.position}
+                        {inFrench ? job.position.french : job.position.english}
                     </h3>
-                    <p className="text-sm text-gray-600 mt-2">{job.summary}</p>
+                    <p className="text-sm text-gray-600 mt-2">
+                        {inFrench ? job.summary.french : job.summary.english}
+                    </p>
                     <div className="mt-4 mb-1">
                         <div className="flex flex-wrap gap-2 mt-1">
                             {job.technologies.map((tech, index) => (
@@ -65,7 +98,7 @@ export default function Experience() {
                                     key={index}
                                     className="bg-zinc-200 text-black text-xs rounded-lg px-3 py-1"
                                 >
-                                    {tech}
+                                    {inFrench ? tech.french : tech.english}
                                 </span>
                             ))}
                         </div>
