@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useRef } from "react";
-import { ChevronDownIcon } from "@heroicons/react/24/solid";
+import { ChevronDownIcon, ChevronUpIcon } from "@heroicons/react/24/solid";
 
 const Dropdown = ({ language, setLanguage }) => {
     const [isOpen, setIsOpen] = useState(false);
@@ -41,7 +41,22 @@ const Dropdown = ({ language, setLanguage }) => {
                     onClick={() => setIsOpen(!isOpen)}
                 >
                     {language === "french" ? "Français" : "English"}
-                    <ChevronDownIcon className="-mr-1 ml-2 h-4 w-4" />
+                    <div className="relative -mr-1 ml-2 h-4 w-4">
+                        <ChevronUpIcon
+                            className={`absolute inset-0 transition-all duration-300 ease-in-out ${
+                                isOpen
+                                    ? "transform rotate-0 opacity-100 scale-100"
+                                    : "transform rotate-180 opacity-0 scale-50"
+                            }`}
+                        />
+                        <ChevronDownIcon
+                            className={`absolute inset-0 transition-all duration-300 ease-in-out ${
+                                isOpen
+                                    ? "transform rotate-180 opacity-0 scale-50"
+                                    : "transform rotate-0 opacity-100 scale-100"
+                            }`}
+                        />
+                    </div>
                 </button>
             </div>
 
