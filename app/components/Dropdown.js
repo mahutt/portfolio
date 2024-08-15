@@ -3,6 +3,16 @@ import { ChevronDownIcon, ChevronUpIcon } from "@heroicons/react/24/solid";
 
 const Dropdown = ({ language, setLanguage }) => {
     const [isOpen, setIsOpen] = useState(false);
+    const [isTouch, setIsTouch] = useState(false);
+
+    useEffect(() => {
+        setIsTouch(
+            "ontouchstart" in window ||
+                navigator.maxTouchPoints > 0 ||
+                navigator.msMaxTouchPoints > 0
+        );
+    }, []);
+
     const dropdownRef = useRef(null);
 
     useEffect(() => {
@@ -37,7 +47,9 @@ const Dropdown = ({ language, setLanguage }) => {
                     type="button"
                     className={`${
                         isOpen ? "bg-gray-900" : ""
-                    } flex flex-row items-center inline-flex justify-center w-full rounded-2xl shadow-sm px-4 py-2 text-sm text-slate-200 focus:outline-none hover:bg-gray-900`}
+                    } flex flex-row items-center inline-flex justify-center w-full rounded-2xl shadow-sm px-4 py-2 text-sm text-slate-200 focus:outline-none ${
+                        isTouch ? "" : "hover:bg-gray-900"
+                    }`}
                     onClick={() => setIsOpen(!isOpen)}
                 >
                     {language === "french" ? "Français" : "English"}
