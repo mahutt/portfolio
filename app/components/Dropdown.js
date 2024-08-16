@@ -1,5 +1,6 @@
 import React, { useState, useEffect, useRef } from "react";
 import { ChevronDownIcon, ChevronUpIcon } from "@heroicons/react/24/solid";
+import FadeTransition from "./FadeTransition";
 
 const Dropdown = ({ language, setLanguage }) => {
     const [isOpen, setIsOpen] = useState(false);
@@ -52,7 +53,9 @@ const Dropdown = ({ language, setLanguage }) => {
                     }`}
                     onClick={() => setIsOpen(!isOpen)}
                 >
-                    {language === "french" ? "Français" : "English"}
+                    <FadeTransition>
+                        {language === "french" ? "Français" : "English"}
+                    </FadeTransition>
                     <div className="relative -mr-1 ml-2 h-4 w-4">
                         <ChevronUpIcon
                             className={`absolute inset-0 transition-all duration-300 ease-in-out ${
