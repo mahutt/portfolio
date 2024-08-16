@@ -21,7 +21,7 @@ export default function FadeTransition({ children }) {
         <div
             style={{
                 opacity: visible ? 1 : 0,
-                transition: "opacity 50ms ease-in-out",
+                transition: "opacity 150ms cubic-bezier(0.4, 0, 0.2, 1)",
             }}
             onTransitionEnd={onAnimationEnd}
         >
