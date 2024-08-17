@@ -49,7 +49,7 @@ const Dropdown = ({ language, setLanguage }) => {
                     className={`${
                         isOpen ? "bg-gray-900" : ""
                     } flex flex-row items-center inline-flex justify-center w-full rounded-2xl shadow-sm px-4 py-2 text-sm text-slate-200 focus:outline-none ${
-                        isTouch ? "" : "hover:bg-gray-900"
+                        isTouch ? "" : "hover:bg-gray-900 transition-colors"
                     }`}
                     onClick={() => setIsOpen(!isOpen)}
                 >
