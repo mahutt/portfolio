@@ -53,9 +53,7 @@ const Dropdown = ({ language, setLanguage }) => {
                     }`}
                     onClick={() => setIsOpen(!isOpen)}
                 >
-                    <FadeTransition>
-                        {language === "french" ? "Français" : "English"}
-                    </FadeTransition>
+                    {language === "french" ? "Français" : "English"}
                     <div className="relative -mr-1 ml-2 h-4 w-4">
                         <ChevronUpIcon
                             className={`absolute inset-0 transition-all duration-300 ease-in-out ${
@@ -85,7 +83,7 @@ const Dropdown = ({ language, setLanguage }) => {
                         {["English", "Français"].map((item, index) => (
                             <a
                                 key={index}
-                                className={`block px-4 py-3 text-sm text-slate-200 hover:bg-gray-900 cursor-pointer ${
+                                className={`block px-4 py-3 text-sm text-slate-200 hover:bg-gray-900 cursor-pointer text-center ${
                                     (language === "french" &&
                                         item === "Français") ||
                                     (language === "english" &&
