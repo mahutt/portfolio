@@ -48,7 +48,7 @@ export default function Header() {
                             <FontAwesomeIcon
                                 icon={faGithub}
                                 size="lg"
-                                className="hover:text-gray-100 transition-colors duration-200"
+                                className="hover:text-gray-100 transition-colors hover:scale-110 transition-transform duration-200"
                             />
                         </a>
                         <a
@@ -58,7 +58,7 @@ export default function Header() {
                             <FontAwesomeIcon
                                 icon={faLinkedin}
                                 size="lg"
-                                className="hover:text-gray-100 transition-colors duration-200"
+                                className="hover:text-gray-100 transition-colors hover:scale-110 transition-transform duration-200"
                             />
                         </a>
                     </div>
