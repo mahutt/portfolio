@@ -15,7 +15,7 @@ export default function Header() {
     const bio = {
         english:
             "I'm an engineering undergraduate at Concordia University. I'm passionate about software and building on the web.",
-        french: "Je suis un étudiant en génie à l'Université Concordia.",
+        french: "Je suis un étudiant en génie à l'Université Concordia. Le développement logiciel et la conception d'applications web me passionnent.",
     };
 
     const navItems = [
