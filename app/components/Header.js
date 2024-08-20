@@ -13,7 +13,8 @@ export default function Header() {
     const pathname = usePathname();
 
     const bio = {
-        english: "I'm an engineering undergraduate at Concordia University.",
+        english:
+            "I'm an engineering undergraduate at Concordia University. I'm passionate about software and building on the web.",
         french: "Je suis un étudiant en génie à l'Université Concordia.",
     };
 
