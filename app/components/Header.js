@@ -75,7 +75,7 @@ export default function Header() {
                                 className={`${
                                     pathname === item.href
                                         ? "underline underline-offset-2"
-                                        : "text-neutral-400 hover:text-slate-200"
+                                        : "text-slate-700 hover:text-slate-900 dark:text-neutral-400 dark:hover:text-slate-200"
                                 } cursor-pointer transition-colors duration-200`}
                             >
                                 {item.label[language]}
