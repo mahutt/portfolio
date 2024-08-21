@@ -43,13 +43,13 @@ export default function Header() {
                             setLanguage={setLanguage}
                         />
                     </div>
-                    <div className="mt-2 flex flex-row gap-2 text-gray-500">
+                    <div className="mt-2 flex flex-row gap-2 dark:text-gray-500">
                         <p>@mahutt</p>
                         <a href="https://github.com/mahutt" target="_blank">
                             <FontAwesomeIcon
                                 icon={faGithub}
                                 size="lg"
-                                className="hover:text-gray-100 transition-colors hover:scale-110 transition-transform duration-200"
+                                className="hover:text-slate-700 dark:hover:text-gray-100 transition-colors hover:scale-110 transition-transform duration-200"
                             />
                         </a>
                         <a
@@ -59,7 +59,7 @@ export default function Header() {
                             <FontAwesomeIcon
                                 icon={faLinkedin}
                                 size="lg"
-                                className="hover:text-gray-100 transition-colors hover:scale-110 transition-transform duration-200"
+                                className="hover:text-slate-700 dark:hover:text-gray-100 transition-colors hover:scale-110 transition-transform duration-200"
                             />
                         </a>
                     </div>
