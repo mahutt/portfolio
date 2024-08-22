@@ -47,9 +47,11 @@ const Dropdown = ({ language, setLanguage }) => {
                 <button
                     type="button"
                     className={`${
-                        isOpen ? "bg-gray-900" : ""
-                    } flex flex-row items-center inline-flex justify-center w-full rounded-2xl shadow-sm px-4 py-2 text-sm text-slate-200 focus:outline-none ${
-                        isTouch ? "" : "hover:bg-gray-900 transition-colors"
+                        isOpen ? "bg-slate-200 dark:bg-gray-900" : ""
+                    } flex flex-row items-center inline-flex justify-center w-full rounded-2xl shadow-sm px-4 py-2 text-sm dark:text-slate-200 focus:outline-none ${
+                        isTouch
+                            ? ""
+                            : "hover:bg-slate-200 dark:hover:bg-gray-900 transition-colors"
                     }`}
                     onClick={() => setIsOpen(!isOpen)}
                 >
@@ -74,7 +76,7 @@ const Dropdown = ({ language, setLanguage }) => {
             </div>
 
             {isOpen && (
-                <div className="origin-top-right absolute right-0 mt-2 w-28 rounded-md border border-gray-900 bg-black ring-1 ring-black ring-opacity-5 overflow-hidden">
+                <div className="origin-top-right absolute right-0 mt-2 w-28 rounded-md border border-slate-200 dark:border-gray-900 bg-slate-200 dark:bg-black ring-1 ring-black ring-opacity-5 overflow-hidden">
                     <div
                         role="menu"
                         aria-orientation="vertical"
@@ -83,7 +85,7 @@ const Dropdown = ({ language, setLanguage }) => {
                         {["English", "Français"].map((item, index) => (
                             <a
                                 key={index}
-                                className={`block px-4 py-3 text-sm text-slate-200 hover:bg-gray-900 cursor-pointer text-center ${
+                                className={`block px-4 py-3 text-sm dark:text-slate-200 hover:bg-slate-300 dark:hover:bg-gray-900 cursor-pointer text-center ${
                                     (language === "french" &&
                                         item === "Français") ||
                                     (language === "english" &&
