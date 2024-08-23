@@ -92,11 +92,11 @@ export default function Experience() {
                 >
                     <div className="flex justify-between items-center flex-wrap gap-x-4">
                         <h3 className="text-lg font-medium">{job.company}</h3>
-                        <h3 className="text-sm text-gray-300">
+                        <h3 className="text-sm dark:text-gray-300">
                             {job.time[language]}
                         </h3>
                     </div>
-                    <h3 className="text-base text-gray-300 font-normal">
+                    <h3 className="text-base dark:text-gray-300 font-normal">
                         {job.position[language]}
                     </h3>
                     <p className="text-sm text-gray-600 mt-2">
