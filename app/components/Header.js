@@ -57,7 +57,7 @@ export default function Header() {
                     <div className="mt-2 flex flex-row gap-2 dark:text-gray-500">
                         <p>@mahutt</p>
                         {socialLinks.map((link) => (
-                            <a href={link.href} target="_blank">
+                            <a key={link.href} href={link.href} target="_blank">
                                 <FontAwesomeIcon
                                     icon={link.icon}
                                     size="lg"
