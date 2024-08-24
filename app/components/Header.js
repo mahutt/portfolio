@@ -12,6 +12,17 @@ export default function Header() {
     const { language, setLanguage } = useContext(LanguageContext);
     const pathname = usePathname();
 
+    const socialLinks = [
+        {
+            href: "https://github.com/mahutt",
+            icon: faGithub,
+        },
+        {
+            href: "https://www.linkedin.com/in/mahutt/",
+            icon: faLinkedin,
+        },
+    ];
+
     const bio = {
         english:
             "I'm an engineering undergraduate at Concordia University. I'm passionate about software and building on the web.",
@@ -45,23 +56,15 @@ export default function Header() {
                     </div>
                     <div className="mt-2 flex flex-row gap-2 dark:text-gray-500">
                         <p>@mahutt</p>
-                        <a href="https://github.com/mahutt" target="_blank">
-                            <FontAwesomeIcon
-                                icon={faGithub}
-                                size="lg"
-                                className="hover:text-slate-700 dark:hover:text-gray-100 transition-colors hover:scale-110 transition-transform duration-200"
-                            />
-                        </a>
-                        <a
-                            href="https://www.linkedin.com/in/mahutt/"
-                            target="_blank"
-                        >
-                            <FontAwesomeIcon
-                                icon={faLinkedin}
-                                size="lg"
-                                className="hover:text-slate-700 dark:hover:text-gray-100 transition-colors hover:scale-110 transition-transform duration-200"
-                            />
-                        </a>
+                        {socialLinks.map((link) => (
+                            <a href={link.href} target="_blank">
+                                <FontAwesomeIcon
+                                    icon={link.icon}
+                                    size="lg"
+                                    className="hover:text-slate-700 dark:hover:text-gray-100 transition-colors hover:scale-110 transition-transform duration-200"
+                                />
+                            </a>
+                        ))}
                     </div>
                 </div>
                 <p>{bio[language]}</p>
