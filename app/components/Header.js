@@ -54,14 +54,14 @@ export default function Header() {
                             setLanguage={setLanguage}
                         />
                     </div>
-                    <div className="mt-2 flex flex-row gap-2 dark:text-gray-500">
+                    <div className="mt-2 flex flex-row gap-2 text-zinc-500 dark:text-gray-500">
                         <p>@mahutt</p>
                         {socialLinks.map((link) => (
                             <a key={link.href} href={link.href} target="_blank">
                                 <FontAwesomeIcon
                                     icon={link.icon}
                                     size="lg"
-                                    className="hover:text-slate-700 dark:hover:text-gray-100 transition-colors hover:scale-110 transition-transform duration-200"
+                                    className="hover:text-zinc-900 dark:hover:text-gray-100 transition-colors hover:scale-110 transition-transform duration-200"
                                 />
                             </a>
                         ))}
