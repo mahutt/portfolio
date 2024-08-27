@@ -48,7 +48,9 @@ export default function Header() {
             <div className="flex flex-col mb-5">
                 <div className="mb-3">
                     <div className="flex justify-between items-center">
-                        <p className="text-2xl font-semibold">Thomas Mahut</p>
+                        <p className="text-2xl font-semibold tracking-tight">
+                            Thomas Mahut
+                        </p>
                         <Dropdown
                             language={language}
                             setLanguage={setLanguage}
