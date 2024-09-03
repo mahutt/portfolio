@@ -10,8 +10,8 @@ export default function Experience() {
             id: 1,
             company: "Fundica",
             time: {
-                english: "Fall 2023 & Summer 2024",
-                french: "Automne 2023 et été 2024",
+                english: "Summer 2024",
+                french: "Été 2024",
             },
             position: {
                 english: "Full Stack Developer",
@@ -19,18 +19,42 @@ export default function Experience() {
             },
             summary: {
                 english:
-                    "Developed and delivered new features, led PHP & Bootstrap version migrations, and developed internal tools (UI test automation & web crawling) using Python & Java.",
-                french: "Développement et livraison de nouvelles fonctionnalités, migrations de version PHP et Bootstrap, et développement d'outils internes (automatisation des tests de UI et crawler web) écrits en Python et en Java.",
+                    "Developed features & resolved security vulnerabilities, improved performance of an internal crawler tool and prototyped an AI powered data entry automation tool.",
+                french: "Développement de fonctionnalités et résolution de vulnérabilités de sécurité, amélioration des performances d'un outil de crawler web, et prototypage d'un outil d'automatisation de saisie de données alimenté par l'IA.",
+            },
+            technologies: [
+                { english: "PHP", french: "PHP" },
+                { english: "SQL", french: "SQL" },
+                { english: "Java", french: "Java" },
+                { english: "React", french: "React" },
+                { english: "OpenAI", french: "OpenAI" },
+            ],
+        },
+        {
+            id: 2,
+            company: "Fundica",
+            time: {
+                english: "Fall 2023",
+                french: "Automne 2023",
+            },
+            position: {
+                english: "Full Stack Developer",
+                french: "Développeur Full Stack",
+            },
+            summary: {
+                english:
+                    "Developed and delivered new features, led PHP & Bootstrap version migrations, and developed an internal testing automation tool.",
+                french: "Développement et livraison de nouvelles fonctionnalités, migration de version PHP et Bootstrap, et développement d'un outil d'automatisation de test interne.",
             },
             technologies: [
                 { english: "PHP", french: "PHP" },
                 { english: "SQL", french: "SQL" },
                 { english: "Python", french: "Python" },
-                { english: "Java", french: "Java" },
+                { english: "Selenium", french: "Selenium" },
             ],
         },
         {
-            id: 2,
+            id: 3,
             company: "Tennis Montreal",
             time: {
                 english: "2019 - 2022",
