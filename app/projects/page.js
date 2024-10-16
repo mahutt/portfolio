@@ -9,6 +9,32 @@ export default function Projects() {
     const { language } = useContext(LanguageContext);
     const projects = [
         {
+            id: 0,
+            title: "DuoMove",
+            description: {
+                english:
+                    "An AI-powered motion-capture fitness game, built in 40 hours and 2nd place winner of the 2024 Hack The Hill hackathon general challenge.",
+                french: "Un jeu de fitness de capture de mouvement alimenté par l'IA, construit en 40 heures et 2e place gagnante du défi général du hackathon Hack The Hill 2024.",
+            },
+            technologies: [
+                "Flask",
+                "Raspberry Pi",
+                "WebSockets",
+                "GStreamer",
+                "Hailo",
+            ],
+            links: [
+                {
+                    label: { english: "Source", french: "Source" },
+                    href: "https://github.com/CarciDev/DuoMoves",
+                },
+                {
+                    label: { english: "Devpost", french: "Devpost" },
+                    href: "https://devpost.com/software/duo-move",
+                },
+            ],
+        },
+        {
             id: 1,
             title: "Nin's Things",
             description: {
