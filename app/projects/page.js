@@ -4,6 +4,7 @@ import React from "react";
 import AnimatedAnchor from "./AnimatedAnchor";
 import { useContext } from "react";
 import { LanguageContext } from "../context/LanguageContext";
+import GlowCard from "../components/GlowCard";
 
 export default function Projects() {
     const { language } = useContext(LanguageContext);
@@ -117,10 +118,7 @@ export default function Projects() {
     return (
         <div className="space-y-6 my-2">
             {projects.map((project) => (
-                <div
-                    key={project.id}
-                    className="border border-gray-800 rounded-lg p-4 hover:shadow-glow transition-shadow duration-200 linear"
-                >
+                <GlowCard key={project.id}>
                     <h3 className="text-lg font-medium">{project.title}</h3>
                     <p className="text-sm text-gray-600 mt-2">
                         {project.description[language]}
@@ -148,7 +146,7 @@ export default function Projects() {
                             </AnimatedAnchor>
                         ))}
                     </div>
-                </div>
+                </GlowCard>
             ))}
         </div>
     );

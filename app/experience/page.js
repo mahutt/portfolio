@@ -2,6 +2,7 @@
 
 import { LanguageContext } from "../context/LanguageContext";
 import { useContext } from "react";
+import GlowCard from "../components/GlowCard";
 
 export default function Experience() {
     const { language } = useContext(LanguageContext);
@@ -110,10 +111,7 @@ export default function Experience() {
     return (
         <div className="space-y-6 my-2">
             {jobs.map((job) => (
-                <div
-                    key={job.id}
-                    className="border border-gray-800 rounded-lg p-4 hover:shadow-glow transition-shadow duration-200 linear"
-                >
+                <GlowCard key={job.id}>
                     <div className="flex justify-between items-center flex-wrap gap-x-4">
                         <h3 className="text-lg font-medium">{job.company}</h3>
                         <h3 className="text-sm text-gray-800 dark:text-gray-300">
@@ -138,7 +136,7 @@ export default function Experience() {
                             ))}
                         </div>
                     </div>
-                </div>
+                </GlowCard>
             ))}
         </div>
     );
