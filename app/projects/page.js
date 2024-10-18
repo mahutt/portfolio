@@ -10,7 +10,7 @@ export default function Projects() {
     const { language } = useContext(LanguageContext);
     const projects = [
         {
-            id: 0,
+            id: 1,
             title: "DuoMove",
             description: {
                 english:
@@ -36,7 +36,7 @@ export default function Projects() {
             ],
         },
         {
-            id: 1,
+            id: 2,
             title: "Nin's Things",
             description: {
                 english:
@@ -57,27 +57,26 @@ export default function Projects() {
             ],
         },
         {
-            id: 2,
-            title: "ThumbRead",
+            id: 3,
+            title: "Concordia Directory",
             description: {
-                english:
-                    "A web application that scrapes and renders a target web page so that it is mobile friendly and accessibility-oriented.",
-                french: "Une application web qui extrait et rend une page web cible de manière à ce qu'elle soit adaptée à la version mobile et axée sur l'accessibilité.",
+                english: "A Concordia University faculty search engine.",
+                french: "Un moteur de recherche de la faculté de l'Université Concordia.",
             },
             technologies: ["Golang", "Echo", "Digital Ocean"],
             links: [
                 {
                     label: { english: "Project", french: "Projet" },
-                    href: "https://thumbread.com",
+                    href: "https://conudir.com",
                 },
                 {
                     label: { english: "Source", french: "Source" },
-                    href: "https://github.com/mahutt/thumbread",
+                    href: "https://github.com/mahutt/ConcordiaDirectory",
                 },
             ],
         },
         {
-            id: 3,
+            id: 4,
             title: "Cue",
             description: {
                 english:
@@ -93,7 +92,7 @@ export default function Projects() {
             ],
         },
         {
-            id: 4,
+            id: 5,
             title: "Rides",
             description: {
                 english:
